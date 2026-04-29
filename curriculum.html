@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum | MathsPro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html">Maths<span>Pro</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html#why">Why Us</a></li>
+    <li><a href="resources.html">Past Papers & Notes</a></li>
+    <li><a href="curriculum.html">Grades</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+  </ul>
+  <button class="nav-cta" onclick="openModal()">Enrol Now</button>
+</nav>
+
+<div class="page-offset">
+    <section id="grades" class="grades-bg" style="min-height: 80vh;">
+    <div class="section-inner">
+        <div class="section-header">
+        <span class="section-tag grades-tag">Curriculum</span>
+        <h2 class="section-title grades-title">Grades We Cover</h2>
+        <p class="section-sub grades-sub">Fully aligned with the Sri Lanka National Curriculum, preparing students from middle school straight through to O/Levels.</p>
+        </div>
+        <div class="grades-grid">
+        <div class="grade-card">
+            <div class="grade-num">6-7</div>
+            <h3>Foundation</h3>
+            <ul>
+            <li>Number Systems</li>
+            <li>Basic Fractions</li>
+            <li>Intro to Geometry</li>
+            <li>Simple Algebra</li>
+            </ul>
+        </div>
+        <div class="grade-card">
+            <div class="grade-num">8-9</div>
+            <h3>Intermediate</h3>
+            <ul>
+            <li>Linear Equations</li>
+            <li>Simultaneous Equations</li>
+            <li>Data Handling</li>
+            <li>Trigonometry Intro</li>
+            </ul>
+        </div>
+        <div class="grade-card">
+            <div class="grade-num">10</div>
+            <h3>O/L Prep Part 1</h3>
+            <ul>
+            <li>Logarithms</li>
+            <li>Progressions</li>
+            <li>Surface Area & Volume</li>
+            <li>Circle Geometry</li>
+            </ul>
+        </div>
+        <div class="grade-card">
+            <div class="grade-num">11</div>
+            <h3>O/L Final Prep</h3>
+            <ul>
+            <li>Quadratic Equations</li>
+            <li>Advanced Trigonometry</li>
+            <li>Probability Trees</li>
+            <li>Full Past Paper Drills</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    </section>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Maths<span>Pro</span> Tuition</div>
+        <p class="footer-desc">Expert maths tuition for Grade 6–11 students in Sri Lanka. Free past papers, notes, and small group classes designed by an engineering graduate to get real results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="resources.html">Past Papers</a></li>
+          <li><a href="resources.html">Study Notes</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Supun Madhuranga</a></li>
+          <li><a href="mailto:info@mathspro.lk">info@mathspro.lk</a></li>
+          <li><a href="#">Sri Lanka</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 MathsPro Tuition. All rights reserved.</p>
+      <p class="footer-seo">Grade 6 Maths | Grade 8 Maths | Grade 10 Maths | O/L Maths Past Papers Sri Lanka</p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>Book Your Free Trial</h3>
+    <p>Fill in the details below and we'll confirm your free trial class within 24 hours.</p>
+    <div id="modal-form">
+      <div class="form-group"><label>Student Name</label><input type="text" placeholder="e.g. Kasun Perera" /></div>
+      <div class="form-group"><label>Grade</label>
+        <select>
+          <option>Select Grade</option>
+          <option>Grade 6</option><option>Grade 7</option><option>Grade 8</option>
+          <option>Grade 9</option><option>Grade 10</option><option>Grade 11</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Parent Phone Number</label><input type="tel" placeholder="+94 77 000 0000" /></div>
+      <div class="form-group"><label>Preferred Class Time</label>
+        <select>
+          <option>Select Time</option>
+          <option>Morning (8am–12pm)</option><option>Evening (4pm–7pm)</option><option>Weekend</option>
+        </select>
+      </div>
+      <button class="modal-submit" onclick="submitForm()">Confirm Free Trial →</button>
+    </div>
+    <div class="success-msg" id="success-msg">
+      <div class="tick">✅</div>
+      <h4>You're booked!</h4>
+      <p>We'll call you within 24 hours to confirm your free trial class. Welcome!</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
