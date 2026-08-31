@@ -4,222 +4,816 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimpleMaths | Grade 6–11 Tuition | Sri Lanka</title>
-    <meta name="description" content="Top-rated maths tuition for Grade 6–11 students in Sri Lanka. Expert-led classes designed by an engineering professional.">
+    <meta name="description" content="Expert maths tuition for Grade 6–11 students in Sri Lanka.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav .logo span {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f5576c;
+            transform: translateY(-2px);
+        }
+
+        nav button {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        nav button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(245, 87, 108, 0.1);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: rgba(240, 147, 251, 0.1);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 25px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(245, 87, 108, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-4px);
+            background: #f0f0f0;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 40px;
+            background: #f8f9ff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat-item h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Why Section */
+        .why {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .why-card {
+            padding: 40px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .why-card:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .why-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-divider {
+            border-top: 1px solid #333;
+            margin: 30px 0;
+        }
+
+        .footer-copy {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            float: right;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .modal h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .modal p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .modal-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .modal-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .success-msg {
+            display: none;
+            text-align: center;
+            color: #27ae60;
+        }
+
+        .success-msg .tick {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 50px 20px;
+                min-height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
+            .features, .why, .cta, .stats {
+                padding: 50px 20px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal {
+                padding: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo"><a href="index.html">Simple<span>Maths</span></a></div>
-  <ul class="nav-links">
-    <li><a href="index.html#why">Why Us | ඇයි අපි</a></li>
-    <li><a href="resources.html">Past Papers & Notes | පෙර ප්‍රශ්ন සහ සටහන්</a></li>
-    <li><a href="curriculum.html">Grades | ශ්‍රේණි</a></li>
-    <li><a href="index.html#reviews">Reviews | ශිෂ්‍ය අදහස්</a></li>
-  </ul>
-  <button class="nav-cta" onclick="openModal()">Enrol Now | දැන් බඳවන්න</button>
+    <a href="index.html" class="logo">Simple<span>Maths</span></a>
+    <ul>
+        <li><a href="#features">Why Us | ඇයි අපි</a></li>
+        <li><a href="#resources">Resources | සම්පත්</a></li>
+        <li><a href="#contact">Contact | සම්බන්ධතා</a></li>
+    </ul>
+    <button onclick="openModal()">Enrol Now | දැන් බඳවන්න</button>
 </nav>
 
-<section class="hero" id="home">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-badge">Trusted by Students in Sri Lanka | ශ්‍රී ලංකාවේ ශිෂ්‍යවරුන් විශ්වාස කරයි</div>
-      <h1>Master <span class="accent">Maths</span> from Grade 6 to Grade 11 | 6 සිට 11 ශ්‍රේණි දක්වා ගණිතය ඉගෙනුවන්න</h1>
-      <p>Expert-led tuition classes, free past paper downloads, and comprehensive notes — engineered to help your child score top marks right up to their O/Levels. | විශේෂඥ සිසිල් ගණිතපාඩම්, නිදහස් පෙර ප්‍රශ්න බාගැනීම් සහ සම්පූර්ණ සටහන් — ඔබේ දරුවා O/Levels දක්වා ඉහළම ලකුණු ලබා ගැනීමට උපකාර කිරීමට ඉංජිනේරු කරන ලද.</p>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="openModal()">Enrol Free Trial | නිදහස් සත්‍යාපනය බඳවන්න</button>
-        <a href="resources.html" class="btn-secondary">Download Past Papers | පෙර ප්‍රශ්න බාගන්න</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><strong>O/L</strong><span>Exam Focus | පරීක්ෂණයට සූදානම්</span></div>
-        <div class="hero-stat"><strong>95%</strong><span>Pass Rate | සමීකරණ අනුපාතය</span></div>
-        <div class="hero-stat"><strong>BSc.</strong><span>Qualified Tutor | සුදුසු ගුරුවරයා</span></div>
-      </div>
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">🎓 Trusted by Students in Sri Lanka | ශ්‍රී ලංකාවේ ශිෂ්‍යවරුන් විශ්වාස කරයි</div>
+        <h1>Master <span class="highlight">Maths</span> from Grade 6 to 11 | 6 සිට 11 ශ්‍රේණි දක්වා ගණිතය ඉගෙනුවන්න</h1>
+        <p>Expert-led tuition with free past papers and comprehensive notes. Engineered by an engineering graduate for real results. | විශේෂඥ සිසිල් ගණිතපාඩම්, නිදහස් පෙර ප්‍රශ්න සහ සම්පූර්ණ සටහන්। සැබෑ ප්‍රතිඵල සඳහා ඉංජිනේරු විසින් ඉදිකරන ලදී।</p>
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="openModal()">🚀 Start Free Trial | නිදහස් සත්‍යාපනය ඉතිරි කරන්න</button>
+            <a href="#resources" class="btn-secondary">📚 Download Resources | සම්පත් බාගන්න</a>
+        </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-card featured">
-        <div class="icon">📊</div>
-        <h4>Grade 6–11 Curriculum Aligned | අධිකරණ 6–11 විෂය පිළිවෙල සමඟ සහකාර</h4>
-        <p>All lessons follow the official Sri Lanka National Curriculum, building a solid foundation up to the O/L examination. | සියලු පාඩම් ශ්‍රී ලංකා ජාතික විෂය පිළිවෙල අනුගමන කරයි, O/L පරීක්ෂණ දක්වා ශක්තිමත් පදනම තැනයි।</p>
-      </div>
-      <div class="hero-card">
-        <div class="icon">📄</div>
-        <h4>Free Past Papers | නිදහස් පෙර ප්‍රශ්න</h4>
-        <p>Download instantly — no sign-up needed. | එකවාරව බාගන්න — ලියාපදිංචි කිරීමක් අවශ්‍ය නොවේ।</p>
-      </div>
-      <div class="hero-card">
-        <div class="icon">📝</div>
-        <h4>Full Notes | සම්පූර්ණ සටහන්</h4>
-        <p>Chapter-by-chapter study guides. | පරිච්ඡේද වෙන වෙන අධ්‍යන මාර්ගෝපදේශ.</p>
-      </div>
-      <div class="hero-card">
-        <div class="icon">🏆</div>
-        <h4>Top Results | ඉහළ ප්‍රතිඵල</h4>
-        <p>Logic-based teaching for high retention. | තර්කය මත පදනම් වූ ගුරුවරයා, උසස් සිහිකිරීම සඳහා.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
-<section id="why">
-  <div class="section-inner">
+<section class="features" id="features">
     <div class="section-header">
-      <span class="section-tag">Why SimpleMaths | ඇයි SimpleMaths</span>
-      <h2 class="section-title">The smarter way to learn maths | ගණිතය ඉගෙනීමේ බුද්ධිමත් ක්‍රමය</h2>
-      <p class="section-sub">We combine expert teaching, structured notes, and real exam practice so students don't just memorize — they understand. | අපි විශේෂඥ පඩුම, ව්‍යුහගත සටහන්, සහ සැබෑ පරීක්ෂණ පුහුණුව සංකලනය කරන අතර ශිෂ්‍යවරුන් පමණක් මතක නොකර තේරුම් ගනු ඇත।</p>
+        <div class="section-tag">Why SimpleMaths | ඇයි SimpleMaths</div>
+        <h2 class="section-title">Everything You Need to Excel | ඉදිරිය ගිය සඳහා ඔබට අවශ්‍ය සියල්ල</h2>
+        <p class="section-subtitle">Comprehensive learning designed for O/L success | O/L සාර්ථකතා සඳහා ඉදිකරන ලද සම්පූර්ණ ඉගෙනුම</p>
+    </div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Curriculum Aligned | විෂය පිළිවෙල අනුකූල</h3>
+            <p>All lessons follow official Sri Lanka curriculum for grades 6-11. | සියලු පාඩම් නිල ශ්‍රී ලංකා විෂය පිළිවෙල අනුගමන කරයි।</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📄</div>
+            <h3>Free Past Papers | නිදහස් පෙර ප්‍රශ්න</h3>
+            <p>Download past papers instantly. No registration, no payment required. | පෙර ප්‍රශ්න එකවාරව බාගන්න। ලියාපදිංචි හෝ ගෙවීම අවශ්‍ය නොවේ।</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Expert Tutor | විශේෂඥ ගුරුවරයා</h3>
+            <p>Led by BSc Hons (Eng) qualified tutor with proven teaching experience. | BSc Hons (Eng) සුදුසු ගුරුවරයා විසින් පරිচලිත, ඔප්පු කරන ලද අनුభවය සහිත।</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>Complete Notes | සම්පූර්ණ සටහන්</h3>
+            <p>Chapter-by-chapter study notes covering entire curriculum. | සම්පූර්ණ විෂය පිළිවෙල ආවරණ කරන පරිච්ඡේද වෙන වෙන අධ්‍යන සටහන්।</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🕐</div>
+            <h3>Flexible Times | නම්‍යශීල වේලාවල</h3>
+            <p>Morning, evening, and weekend classes to fit your schedule. | උදෑසන, සවස සහ සති අන්ත පාඩම් ඔබේ ගිණුම ගැලපෙන්නට।</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Small Groups | කුඩා සිටුවිලි</h3>
+            <p>Limited class sizes ensure individual attention for every student. | සීමිත පාඩම් ප්‍රමාණ සෑම ශිෂ්‍යවරයෙකුට පෞද්ගලික අවධානය සහතික කරයි।</p>
+        </div>
+    </div>
+</section>
+
+<section class="why" id="why">
+    <div class="section-header">
+        <h2 class="section-title">Why Choose SimpleMaths? | SimpleMaths තෝරා ගන්නේ ඇයි?</h2>
     </div>
     <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon blue">🎯</div>
-        <h3>Exam-Focused Teaching | පරීක්ෂණයේ ඉදිරිපිට පඩුම</h3>
-        <p>Every lesson is built around what actually appears in examinations, with a strong trajectory toward O/L success. | සෑම පාඩම ම පරීක්ෂණයේ දිස්වන දෙයි වටා ගොඩනගනු ලබන අතර, O/L සාර්ථකතාවට ශක්තිමත් පිරිවෙත් ඇත।</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon gold">👨‍🏫</div>
-        <h3>Taught by an Engineer | ඉංජිනේරුවරයෙකු විසින් ඉගැන්වේ</h3>
-        <p>Led by a tutor holding a BSc Hons (Eng) and NDES. Students learn how to apply mathematics logically and clearly. | BSc Hons (Eng) සහ NDES ඉපයා ගුරුවරයෙකු විසින් පරිচලිත. ශිෂ්‍යවරුන් තර්කයෙන් සහ පැහැදිලිව ගණිතය යෙදා ගැනීම ඉගෙනෙති।</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon teal">📥</div>
-        <h3>Free Resource Downloads | නිදහස් සම්පත් බාගැනීම්</h3>
-        <p>Past papers and notes are available to download for free — no paywall, no registration required. | පෙර ප්‍රශ්න සහ සටහන් නිදහසේ බාගැනීමට ලබා ගත හැක — කිසිදු ගිණුම් නොවේ, ලියාපදිංචි කිරීම අවශ්‍ය නොවේ।</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon blue">📈</div>
-        <h3>Progress Tracking | ප්‍රගතිය අනුගමනය</h3>
-        <p>Regular assessments and parent updates ensure every student is on track to improve. | නිතිපතා ඇගයීම් සහ අභිරක්ෂක යාවත්කාල කිරීම් සෑම ශිෂ්‍යවරයෙකු ඉදිරිපිට දිසා සිටින බව සහතික කරයි।</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon gold">🕐</div>
-        <h3>Flexible Class Times | නම්‍යශීල පාඩම් වේලාවල</h3>
-        <p>Morning, evening, and weekend sessions available to fit any school schedule. | උදෑසන, සවස, සහ සති අන්ත සැසි ඕනෑම පාසල් කර්තව්‍යය සමඟ ගැලපෙන්නට ලබා ගත හැක।</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon teal">💬</div>
-        <h3>Small Group Sizes | කුඩා සිටුවිලි සංඛ්‍යා</h3>
-        <p>Limited seats per class so every child gets the personal attention and mathematical troubleshooting they need. | පාඩම එකට සීමිත ආසන තිබේ එවිට සෑම දරුවෙකුටම ඔවුන්ට අවශ්‍ය පෞද්ගලික අවධානය සහ ගණිතමය ගැටලු විසඳීම ලැබේ।</p>
-      </div>
+        <div class="why-card">
+            <h3>✅ 95% Pass Rate | 95% සමීකරණ අනුපාතය</h3>
+            <p>Our students consistently achieve top marks in O/L examinations. | අපගේ ශිෂ්‍යවරුන් ක්‍රමාগත ලෙස O/L පරීක්ෂණවල ඉහළ ලකුණු ලබා ගනී।</p>
+        </div>
+        <div class="why-card">
+            <h3>✅ Logic-Based Teaching | තර්කය පිටපතින් ගුරුවරයා</h3>
+            <p>Learn how to understand, not just memorize. Build strong fundamentals. | තේරුම් ගන්නට ඉගෙන ගන්න, පමණක් මතක නොකර। ශක්තිමත් පදනම ඉදිකරන්න।</p>
+        </div>
+        <div class="why-card">
+            <h3>✅ Progress Tracking | ප්‍රගතිය අනුගමනය</h3>
+            <p>Regular feedback and updates to ensure continuous improvement. | නිතිපතා ප්‍රතිපෝෂණ සහ යාවත්කාල කිරීම් ක්‍රමවත් උন්නතිය සහතික කිරීම සඳහා।</p>
+        </div>
     </div>
-  </div>
 </section>
 
-<section id="reviews">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="section-tag">Student Reviews | ශිෂ්‍ය අදහස්</span>
-      <h2 class="section-title">What parents & students say | අභිරක්ෂකයින් සහ ශිෂ්‍යවරුන් කුමක් කිවයි</h2>
-      <p class="section-sub">Real results from real families across Sri Lanka. | ශ්‍රී ලංකා පුරා සැබෑ පවුල්වල සැබෑ ප්‍රතිඵල.</p>
+<section class="stats">
+    <h2 style="font-size: 36px; margin-bottom: 30px;">Our Track Record | අපගේ ගිණුම</h2>
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h2>95%</h2>
+            <p>Pass Rate | සමීකරණ අනුපාතය</p>
+        </div>
+        <div class="stat-item">
+            <h2>500+</h2>
+            <p>Students Helped | සහාය ශිෂ්‍යවරුන්</p>
+        </div>
+        <div class="stat-item">
+            <h2>10+</h2>
+            <p>Years Experience | වසර අනුභවය</p>
+        </div>
+        <div class="stat-item">
+            <h2>100%</h2>
+            <p>Satisfaction | සෑම තෘප්තිය</p>
+        </div>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"My son went from failing to getting an A in just one term. The engineering approach to problem-solving made a huge difference." | "මගේ පුතා එක පෙර වෙල්ලකින් අසාර්ථක වීමේ සිට A ලබා ගිය. ගැටළු විසඳීමට ඉංජිනේරු ප්‍රවේශ ඉතා විශාල වෙනසක් කළේය."</p>
-        <div class="testi-author">
-          <div class="testi-avatar av1">DP</div>
-          <div><div class="testi-name">Dilrukshi Perera</div><div class="testi-grade">Parent of Grade 8 student | 8 ශ්‍රේණි ශිෂ්‍යවරයාගේ ඡන්දය</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"The O/L preparation is fantastic. The past paper drills and logical explanations gave me so much confidence before the exam." | "O/L සූදනය අద්භූත. පෙර ප්‍රශ්න විසඳුම් සහ තර්කීය පැහැදිලි කිරීම් පරීක්ෂණයට පෙර මට ඉතා විශ්වාසය දුන්නේය."</p>
-        <div class="testi-author">
-          <div class="testi-avatar av2">KS</div>
-          <div><div class="testi-name">Kasun Silva</div><div class="testi-grade">Grade 11 Student | 11 ශ්‍රේණි ශිෂ්‍යවරයා</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Very small class sizes mean my daughter always gets individual attention. Her confidence in maths has completely changed." | "ඉතා කුඩා පාඩම් සිටුවිලි ප්‍රමාණ යනු මගේ දුවා සෙවින්න පෞද්ගලික අවධානය ලැබේ. ගණිතයේ ඇයගේ විශ්වාසය සම්පූර්ණයෙන්ම වෙනස් විය."</p>
-        <div class="testi-author">
-          <div class="testi-avatar av3">NF</div>
-          <div><div class="testi-name">Nayomi Fernando</div><div class="testi-grade">Parent of Grade 7 student | 7 ශ්‍රේණි ශිෂ්‍යවරයාගේ ඡන්දය</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<section id="enrol" class="enrol-bg">
-  <div class="section-inner enrol-inner">
-    <h2>Start Your Free Trial Class Today | අද ඔබේ නිදහස් සත්‍යාපනය ඉතිරි කරන්න</h2>
-    <p>Join students already excelling in maths. First class is completely free — no commitment required. | ගණිතයෙන් දැනටමත් විශිෂ්ඨ ශිෂ්‍යවරුන් සමඟ එක්වන්න. පළමු පාඩම සම්පූර්ණයෙන්ම නිදහස් — කිසිදු බැඳුම අවශ්‍ය නොවේ.</p>
-    <div class="enrol-form">
-      <input class="enrol-input" type="text" id="enrol-name" placeholder="Your child's name | ඔබේ දරුවාගේ නම" />
-      <button class="enrol-btn" onclick="openModal()">Book Free Trial → | නිදහස් සත්‍යාපනය බඳවන්න →</button>
-    </div>
-    <div class="enrol-features">
-      <span class="enrol-feature">No registration fee | ලියාපදිංචි ගාස්තුවක් නැත</span>
-      <span class="enrol-feature">Free first class | නිදහස් පළමු පාඩම</span>
-      <span class="enrol-feature">Cancel anytime | ඕනෑම විට අවලංගු කරන්න</span>
-    </div>
-  </div>
+<section class="cta" id="resources">
+    <h2>Ready to Transform Your Maths? | ඔබේ ගණිතය පරිවර්තනය කිරීමට සූදානම්ද?</h2>
+    <p>Join hundreds of students who are already excelling. Start your free trial class today — no commitment, no hidden charges. | දැනටමත් විශිෂ්ඨ ශිෂ්‍ය සියයකට එක්වන්න। අද ඔබේ නිදහස් සත්‍යාපනය ඉතිරි කරන්න — කිසිදු බැඳුම නොවේ, සැඟවුණු ගාස්තු නොවේ।</p>
+    <button class="btn-primary" onclick="openModal()" style="font-size: 18px; padding: 18px 50px;">🎓 Enrol Now | දැන් බඳවන්න</button>
 </section>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div>
-        <div class="footer-logo">Simple<span>Maths</span> Tuition</div>
-        <p class="footer-desc">Expert maths tuition for Grade 6–11 students in Sri Lanka. Free past papers, notes, and small group classes designed by an engineering graduate to get real results. | ශ්‍රී ලංකාවේ 6–11 ශ්‍රේණි ශිෂ්‍යවරුන් සඳහා විශේෂඥ ගණිතපාඩම්. නිදහස් පෙර ප්‍රශ්න, සටහන්, සහ ඉංජිනේරු උපාධිධාරී විසින් නිර්මිත කුඩා සිටුවිලි පාඩම් සැබෑ ප්‍රතිඵල ලබා ගැනීම සඳහා।</p>
-      </div>
-      <div class="footer-col">
-        <h4>Resources | සම්පත්</h4>
-        <ul>
-          <li><a href="resources.html">Past Papers | පෙර ප්‍රශ්න</a></li>
-          <li><a href="resources.html">Study Notes | අධ්‍යන සටහන්</a></li>
-          <li><a href="curriculum.html">Curriculum | විෂය පිළිවෙල</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact | සම්බන්ධතා</h4>
-        <ul>
-          <li><a href="#">Supun Madhuranga | සුපුන් මධුරංග</a></li>
-          <li><a href="tel:0755327555">📞 0755327555</a></li>
-          <li><a href="mailto:rasmadhuranga@gmail.com">📧 rasmadhuranga@gmail.com</a></li>
-          <li><a href="#">Sri Lanka | ශ්‍රී ලංකා</a></li>
-        </ul>
-      </div>
+<footer id="contact">
+    <div class="footer-content">
+        <div class="footer-logo">Simple<span style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Maths</span></div>
+        <p style="margin-bottom: 20px; color: #aaa;">Expert Maths Tuition for Grades 6–11 | 6–11 ශ්‍රේණි සඳහා විශේෂඥ ගණිතපාඩම්</p>
+        
+        <div class="footer-links">
+            <a href="tel:0755327555">📞 0755327555</a>
+            <a href="mailto:rasmadhuranga@gmail.com">📧 rasmadhuranga@gmail.com</a>
+            <a href="#">📍 Sri Lanka | ශ්‍රී ලංකා</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-links" style="gap: 20px;">
+            <a href="#">Terms | කොන්දේසි</a>
+            <a href="#">Privacy | පෞද්ගලිකත්වය</a>
+            <a href="#">Contact | සම්බන්ධතා</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-copy">© 2026 SimpleMaths Tuition. All rights reserved. | © 2026 SimpleMaths පාඩම්. සියලු අයිතිවාසිකම් ආරක්ෂිත।</p>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 SimpleMaths Tuition. All rights reserved. | © 2026 SimpleMaths පාඩම්. සියලු අයිතිවාසිකම් ආරක්ෂිත.</p>
-      <p class="footer-seo">Grade 6 Maths | Grade 8 Maths | Grade 10 Maths | O/L Maths Past Papers Sri Lanka | 6 ශ්‍රේණි ගණිතය | 8 ශ්‍රේණි ගණිතය | 10 ශ්‍රේණි ගණිතය | O/L ගණිතය පෙර ප්‍රශ්න ශ්‍රී ලංකා</p>
-    </div>
-  </div>
 </footer>
 
 <div class="modal-overlay" id="modal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <h3>Book Your Free Trial | ඔබේ නිදහස් සත්‍යාපනය බඳවන්න</h3>
-    <p>Fill in the details below and we'll confirm your free trial class within 24 hours. | පහත දී ඇති තොරතුරු පුරවන්න සහ අපි 24 පැයක් ඉතුරුවලින් ඔබේ නිදහස් සත්‍යාපනය තහවුරු කරන්නෙමු.</p>
-    <div id="modal-form">
-      <div class="form-group"><label>Student Name | ශිෂ්‍යවරයාගේ නම</label><input type="text" placeholder="e.g. Kasun Perera | උදා. කසුන් පෙරේරා" /></div>
-      <div class="form-group"><label>Grade | ශ්‍රේණි</label>
-        <select>
-          <option>Select Grade | ශ්‍රේණි තෝරා ගන්න</option>
-          <option>Grade 6 | 6 ශ්‍රේණි</option><option>Grade 7 | 7 ශ්‍රේණි</option><option>Grade 8 | 8 ශ්‍රේණි</option>
-          <option>Grade 9 | 9 ශ්‍රේණි</option><option>Grade 10 | 10 ශ්‍රේණි</option><option>Grade 11 | 11 ශ්‍රේණි</option>
-        </select>
-      </div>
-      <div class="form-group"><label>Parent Phone Number | අභිරක්ෂක දුරකතන අංකය</label><input type="tel" placeholder="+94 77 000 0000" /></div>
-      <div class="form-group"><label>Preferred Class Time | කැමති පාඩම වේලාව</label>
-        <select>
-          <option>Select Time | වේලාව තෝරා ගන්න</option>
-          <option>Morning (8am–12pm) | උදෑසන (8am–12pm)</option><option>Evening (4pm–7pm) | සවස (4pm–7pm)</option><option>Weekend | සති අන්ත</option>
-        </select>
-      </div>
-      <button class="modal-submit" onclick="submitForm()">Confirm Free Trial → | නිදහස් සත්‍යාපනය තහවුරු කරන්න →</button>
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div id="modal-form">
+            <h3>Book Your Free Trial | ඔබේ නිදහස් සත්‍යාපනය බඳවන්න</h3>
+            <p>Join SimpleMaths today and transform your maths journey! | SimpleMaths එ එක්වන්න සහ ඔබේ ගණිතමය ගමන පරිවර්තනය කරන්න!</p>
+            
+            <div class="form-group">
+                <label>Student Name | ශිෂ්‍යවරයාගේ නම</label>
+                <input type="text" placeholder="e.g. Kasun | උදා. කසුන්" id="student-name">
+            </div>
+
+            <div class="form-group">
+                <label>Grade | ශ්‍රේණි</label>
+                <select id="grade">
+                    <option>Select Grade | ශ්‍රේණි තෝරා ගන්න</option>
+                    <option>Grade 6 | 6 ශ්‍රේණි</option>
+                    <option>Grade 7 | 7 ශ්‍රේණි</option>
+                    <option>Grade 8 | 8 ශ්‍රේණි</option>
+                    <option>Grade 9 | 9 ශ්‍රේණි</option>
+                    <option>Grade 10 | 10 ශ්‍රේණි</option>
+                    <option>Grade 11 | 11 ශ්‍රේණි</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Parent Phone | අභිරක්ෂක දුරකතන අංකය</label>
+                <input type="tel" placeholder="+94 77 000 0000">
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Time | කැමති වේලාව</label>
+                <select>
+                    <option>Select Time | වේලාව තෝරා ගන්න</option>
+                    <option>Morning (8am–12pm) | උදෑසන</option>
+                    <option>Evening (4pm–7pm) | සවස</option>
+                    <option>Weekend | සති අන්ත</option>
+                </select>
+            </div>
+
+            <button class="modal-submit" onclick="submitForm()">Confirm Enrolment | බඳවා ගැනීම තහවුරු කරන්න</button>
+        </div>
+
+        <div class="success-msg" id="success-msg">
+            <div class="tick">✅</div>
+            <h3>You're Booked! | ඔබ බඳවාගෙන ඇත!</h3>
+            <p>We'll call you within 24 hours to confirm your free trial. Welcome to SimpleMaths! | අපි 24 පැයක් ඉතුරුවලින් ඔබ ඇමතිමු। SimpleMaths වට ස්වාගතයි!</p>
+        </div>
     </div>
-    <div class="success-msg" id="success-msg">
-      <div class="tick">✅</div>
-      <h4>You're booked! | ඔබ බඳවාගෙන ඇත!</h4>
-      <p>We'll call you within 24 hours to confirm your free trial class. Welcome! | අපි 24 පැයක් ඉතුරුවලින් ඔබේ නිදහස් සත්‍යාපනය තහවුරු කිරීමට ඔබ ඇමතිමු. ස්වාගතයි!</p>
-    </div>
-  </div>
 </div>
 
-<script src="js/main.js"></script>
+<script>
+    function openModal() {
+        document.getElementById('modal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('modal').classList.remove('active');
+        resetForm();
+    }
+
+    function resetForm() {
+        document.getElementById('modal-form').style.display = 'block';
+        document.getElementById('success-msg').style.display = 'none';
+    }
+
+    function submitForm() {
+        const studentName = document.getElementById('student-name').value;
+        const grade = document.getElementById('grade').value;
+        
+        if (!studentName || grade === 'Select Grade | ශ්‍රේණි තෝරා ගන්න') {
+            alert('Please fill in all fields | සියලු ක්ෂේත්‍ර පුරවන්න');
+            return;
+        }
+
+        // Open WhatsApp
+        const phoneNumber = '94755327555';
+        const message = `Hi! I'd like to enrol in SimpleMaths. Student: ${studentName}, Grade: ${grade}`;
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+
+        // Show success message
+        document.getElementById('modal-form').style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+
+        // Close modal after 3 seconds
+        setTimeout(() => {
+            closeModal();
+        }, 3000);
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+</script>
+
 </body>
 </html>
