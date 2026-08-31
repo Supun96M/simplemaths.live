@@ -38,13 +38,27 @@ function submitForm() {
     return;
   }
 
+  // Collect form data
+  const studentName = document.querySelector('input[placeholder="e.g. Kasun Perera"]').value;
+  const grade = document.querySelectorAll('select')[0].value;
+  const phoneNumber = document.querySelector('input[placeholder="+94 77 000 0000"]').value;
+  const preferredTime = document.querySelectorAll('select')[1].value;
+
+  // Format message for WhatsApp
+  const message = `New Enrollment Request%0A%0AStudent Name: ${studentName}%0AGrade: ${grade}%0AParent Phone: ${phoneNumber}%0APreferred Time: ${preferredTime}%0ATimestamp: ${new Date().toLocaleString()}`;
+
+  // WhatsApp number (Your number with country code, no + or spaces)
+  const whatsappNumber = '94755327555'; // Sri Lanka: 94 + 755327555
+
+  // Send to WhatsApp
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+
   // Hide form and show success message
   document.getElementById('modal-form').style.display = 'none';
   document.getElementById('success-msg').style.display = 'flex';
 
-  // Trigger phone call
-  const phoneNumber = '0755327555';
-  window.location.href = `tel:${phoneNumber}`;
+  // Open WhatsApp
+  window.open(whatsappURL, '_blank');
 
   // Close modal after 3 seconds
   setTimeout(() => {
