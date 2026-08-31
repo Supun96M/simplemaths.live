@@ -42,7 +42,11 @@ function submitForm() {
   document.getElementById('modal-form').style.display = 'none';
   document.getElementById('success-msg').style.display = 'flex';
 
-  // Optional: Close modal after 3 seconds
+  // Trigger phone call
+  const phoneNumber = '0755327555';
+  window.location.href = `tel:${phoneNumber}`;
+
+  // Close modal after 3 seconds
   setTimeout(() => {
     closeModal();
   }, 3000);
